@@ -15,11 +15,11 @@ openai.api_key=openai_api_key
 ################################################################################
 ### Step 2
 ################################################################################
-
+print('here front')
 # Load the cl100k_base tokenizer which is designed to work with the ada-002 model
 tokenizer = tiktoken.get_encoding("cl100k_base")
-
-df = pd.read_csv('processed/scraped1.csv', index_col=0)
+print('here')
+df = pd.read_csv('processed/scraped.csv', index_col=0)
 df.columns = ['Unique ID', 'text']
 
 print(df.text)
