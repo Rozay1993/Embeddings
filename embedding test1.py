@@ -22,7 +22,6 @@ print('here')
 df = pd.read_csv('processed/scraped.csv', index_col=0)
 df.columns = ['Unique ID', 'text']
 
-print(df.text)
 # Tokenize the text and save the number of tokens to a new column
 df['n_tokens'] = df.text.apply(lambda x: len(tokenizer.encode(x)))
 
